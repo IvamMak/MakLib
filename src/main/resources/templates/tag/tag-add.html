@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Tag-add</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+<div class="container mt-5 mb-5">
+    <h1>Добавить тэг</h1>
+    <form action="/tags/add" method="post">
+        <input type="text" name="tag_name" placeholder="Введите наименование тэга" class="form-control"><br>
+        <button type="submit" class="btn btn-success">Добавить</button>
+    </form>
+</div>
+<footer th:insert="blocks/footer :: footer"></footer>
+</body>
+</html>

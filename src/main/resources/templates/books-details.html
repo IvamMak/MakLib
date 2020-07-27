@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Books</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+<div class="container mt-5">
+    <h1 th:text="${book.title}"/>
+    <h3 th:text="${book.author}"/>
+    <p th:text="${book.getTagName()}"/>
+    <p th:text="${book.comment}"/>
+    <a th:href="'/books/' + ${book.id} + '/edit'" class="btn btn-warning">Редактировать</a>
+    <a th:href="'/books/' + ${book.id} + '/remove'" class="btn btn-warning">Удалить</a>
+</div>
+<footer th:insert="blocks/footer :: footer"></footer>
+</body>
+</html>

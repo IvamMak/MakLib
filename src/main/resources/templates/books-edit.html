@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Редактирование книги</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+<div class="container mt-5 mb-5">
+    <h1>Редактировать книгу</h1>
+    <h3 th:text="${book.title}"/>
+    <form method="post">
+        <input type="text" name="author" th:value="${book.author}" class="form-control"><br>
+        <input type="text" name="title" th:value="${book.title}" class="form-control"><br>
+        <input type="text" name="tagName" th:value="${book.getTagName()}" class="form-control"><br>
+        <textarea name="comment" th:text="${book.comment}" class="form-control"/><br>
+        <button type="submit" class="btn btn-success">Обновить</button>
+    </form>
+</div>
+<footer th:insert="blocks/footer :: footer"></footer>
+</body>
+</html>

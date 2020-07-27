@@ -1,0 +1,12 @@
+<div th:fragment="footer" xmlns:th="http://www.w3.org/1999/xhtml">
+    <footer class="text-muted">
+        <div class="container">
+            <p class="float-right">
+                <a href="#">Back to top</a>
+            </p>
+            <form th:action="@{/logout}" method="post">
+                <input type="submit" value="Выйти из библиотеки" class="btn btn-warning"><br>
+            </form>
+        </div>
+    </footer>
+</div>

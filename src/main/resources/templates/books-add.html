@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Book-add</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+<div class="container mt-5 mb-5">
+    <h1>Добавить книгу</h1>
+    <form action="/books/add" method="post">
+        <input type="text" name="author" placeholder="Введите автора" class="form-control"><br>
+        <input type="text" name="title" placeholder="Введите название" class="form-control"><br>
+        <select name="tagName" class="form-control">
+            <div th:each="el : ${tags}" class="alert alert-info mt-2">
+                <option th:value="${el.name}"><p th:text="${el.name}"/></option>
+            </div>
+        </select><br>
+        <textarea name="comment" placeholder="Введите краткое описание" class="form-control"></textarea><br>
+        <button type="submit" class="btn btn-success">Добавить</button>
+    </form>
+</div>
+<footer th:insert="blocks/footer :: footer"></footer>
+</body>
+</html>
