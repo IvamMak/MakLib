@@ -17,6 +17,13 @@ public class Tag {
         return id;
     }
 
+    public Tag(String name) {
+        this.name = name;
+    }
+
+    public Tag() {
+    }
+
     public String getName() {
         return name;
     }

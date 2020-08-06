@@ -14,7 +14,7 @@
     <p th:text="${book.comment}"/>
     <a th:href="'/books/' + ${book.id} + '/edit'" class="btn btn-warning">Редактировать</a>
     <a th:href="'/books/' + ${book.id} + '/remove'" class="btn btn-warning">Удалить</a>
-</div>
+</div><br>
 <footer th:insert="blocks/footer :: footer"></footer>
 </body>
 </html>
