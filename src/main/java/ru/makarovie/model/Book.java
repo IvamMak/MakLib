@@ -29,7 +29,7 @@ public class Book {
     }
 
     public String getTagName() {
-        return tag == null ? "<none>" : tag.getName();
+        return tag.getName();
     }
 
     public Long getId() {
